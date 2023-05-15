@@ -31,6 +31,9 @@ jobs:
       - name: Set GITHUB_ACTIONS environment variable
         run:  echo "GITHUB_ACTIONS=true" >> $GITHUB_ENV
 
-      - name: Run
+      - run: sudo env "PATH=$PATH" echo "GITHUB_ACTIONS=true" >> $GITHUB_ENV
+      - run: sudo echo "PATH=$PATH"
+
+#      - name: Run
 #        run: go run main.go
-        run: sudo env "PATH=$PATH" go run main.go
+#        run: sudo env "PATH=$PATH" go run main.go
