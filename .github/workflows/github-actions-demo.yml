@@ -28,8 +28,9 @@ jobs:
         with:
           go-version: 1.19
 
-      - name: Show GITHUB_ACTIONS environment variable
-        run: echo $GITHUB_ENV
+      - name: Set GITHUB_ACTIONS environment variable
+        run: echo "GITHUB_ACTIONS=true" >> $GITHUB_ENV
+      - run: echo $GITHUB_ENV
 
       - name: Build
         run: go run main.go
