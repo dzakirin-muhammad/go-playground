@@ -32,7 +32,7 @@ jobs:
         run:  echo "GITHUB_ACTIONS=true" >> $GITHUB_ENV
 
       - name: Set GITHUB_ACTIONS environment variable
-        run: sudo env "PATH=$PATH" echo "GITHUB_ACTIONS=true" >> $PATH
+        run: sudo env "PATH=$PATH" echo "GITHUB_ACTIONS=true" >> $GITHUB_ENV
 
       - run: echo $GITHUB_ENV
       - run: echo $PATH
