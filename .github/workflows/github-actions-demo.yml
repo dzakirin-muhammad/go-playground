@@ -36,4 +36,4 @@ jobs:
 
       - name: Run
 #        run: go run main.go
-        run: sudo env "PATH=$PATH" go run -v main.go
+        run: sudo env "PATH=$PATH" go run -v ./...
